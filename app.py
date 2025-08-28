@@ -4,7 +4,6 @@ import pandas as pd
 import os
 from datetime import datetime
 
-# ---------------- OOP Classes ----------------
 class Port:
     def __init__(self, port_num, status):
         self.port_num = port_num
@@ -69,8 +68,6 @@ class NmapScanner:
         df.to_csv(filename, index=False)
         return filename
 
-
-# ---------------- Flask App ----------------
 app = Flask(__name__)
 scanner = NmapScanner()
 
